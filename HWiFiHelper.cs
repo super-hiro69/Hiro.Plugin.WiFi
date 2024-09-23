@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows;
 
 namespace Hiro.Plugin.Official.WiFi
 {
@@ -42,7 +43,7 @@ namespace Hiro.Plugin.Official.WiFi
 
         internal static string Read_Ini(string Section, string Key, string defaultText)
         {
-            var iniFilePath = AppDomain.CurrentDomain.BaseDirectory + "\\lang\\lang.hlp";
+            var iniFilePath = AppDomain.CurrentDomain.BaseDirectory + "system\\plugins\\hiro.wifi\\lang\\lang.hlp";
             if (File.Exists(iniFilePath))
             {
                 byte[] buffer = new byte[1024];
