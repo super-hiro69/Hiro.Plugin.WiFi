@@ -43,7 +43,7 @@ namespace Hiro.Plugin.Official.WiFi
 
         internal static string Read_Ini(string Section, string Key, string defaultText)
         {
-            var iniFilePath = AppDomain.CurrentDomain.BaseDirectory + "system\\plugins\\hiro.wifi\\lang\\lang.hlp";
+            var iniFilePath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\lang\\lang.hlp";
             if (File.Exists(iniFilePath))
             {
                 byte[] buffer = new byte[1024];
